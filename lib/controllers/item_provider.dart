@@ -7,6 +7,7 @@ class ItemProvider extends ChangeNotifier {
   bool _isLoading = false;
   bool _hasError = false;
   bool _isDarkMode = false;
+  List<Item>filteredItems =[];
 
   List<Item> get items => _items;
   bool get isLoading => _isLoading;
@@ -31,4 +32,17 @@ class ItemProvider extends ChangeNotifier {
       notifyListeners();
     }
   }
+
+  void filterItems(String query) {
+    if (query.isEmpty) {
+      filteredItems = items;
+    } else {
+      filteredItems = items
+          .where(
+              (item) => item.title.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    }
+    notifyListeners();
+  }
+
 }
