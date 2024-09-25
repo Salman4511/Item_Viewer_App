@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:item_viewer_app/controllers/item_provider.dart';
+import 'package:item_viewer_app/utils/theme.dart';
+import 'package:item_viewer_app/views/home_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -15,6 +18,7 @@ class MyApp extends StatelessWidget {
       child: Consumer<ItemProvider>(
         builder: (context, provider, child) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             title: 'Item Viewer',
             theme: lightTheme,
             darkTheme: darkTheme,
