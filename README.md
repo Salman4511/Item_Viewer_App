@@ -38,7 +38,7 @@ Follow these instructions to get the project up and running on your local machin
 1. **Clone the repository:**
 
    ```
-   git clone https://github.com/Salman4511/item_viewer_app.git
+   https://github.com/Salman4511/Item_Viewer_App.git
    cd item_viewer_app
    ```
 2. **Install dependencies:**
